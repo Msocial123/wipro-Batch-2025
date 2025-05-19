@@ -1,0 +1,35 @@
+Step-1:
+
+sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+    https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+
+step-2: 
+
+  echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \
+    https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+    /etc/apt/sources.list.d/jenkins.list > /dev/null
+
+
+Step-3
+
+  sudo apt-get update
+
+Step-4
+
+  sudo apt-get install fontconfig openjdk-17-jre
+
+Step-5
+
+  sudo apt-get install Jenkins
+
+Step-6
+
+sudo systemctl enable Jenkins
+
+Step-7
+
+sudo systemctl start Jenkins
+
+Step-8
+
+sudo systemctl status Jenkins
