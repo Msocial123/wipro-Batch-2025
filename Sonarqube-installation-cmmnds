@@ -8,3 +8,29 @@ apt install docker.io -y
 docker run -d --name sonar -p 9000:9000 sonarqube:lts-community  (to create SonarQube container)
 
 docker ps ( to see running containers )
+
+
+# jenkins pipeline script for sonarqube
+
+pipeline {
+    agent any
+    environment {
+        SCANNER_HOME= tool 'sonar-scanner'
+    }
+
+    stages {
+        stage('git ceckout') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Msocial123/Netflix-clone.git'
+            }
+        }
+        
+        stage ('soanrqube analysis') {
+            steps {
+                withSonarQubeEnv('sonar') {
+                  sh '''  $SCANNER_HOME/bin/sonar-scanner -Dsonar.projectKey=Netflix -Dsonar.projectName=Netflix '''
+                }
+            }
+        }
+    }
+}
