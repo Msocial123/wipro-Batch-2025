@@ -1,0 +1,68 @@
+# Dockerfile:
+# =========
+
+# It is a text document which contains instructions for building docker image
+
+
+# FROM   python:latest, pytohn:3.1.2, ubuntu:latest,  node:latest, opejdk:17.0
+
+#	Ø Os, cpu, ram, rom
+#	Ø Base platform for hosting ur website or app
+#	Ø It will define a base image for ur app 
+
+#WORKDIR:- it will create a working directory in ur container machine
+
+#WORKDIR  /app,  /murali,  /anvesh, /shubahm,  /divya , /saha, /Abhijit 
+
+#RUN :- it will execute commands while creating the docker image
+
+#RUN apt-get update -y
+#RUN apt-get install docker -y
+#RUN apt-get install git -v
+#RUN apt install mysql -y
+#RUN apt install apache2 -y 
+
+#COPY:- it will copy all ur app src, libraries, dependencies, env and configuration files into ur container machine or container working directory 
+
+#MAINTAINER :- it will specify the author / owner of the dockerfiles 
+
+#MAINTAINER <muralisocial123@gmail.com> 
+
+#CMD:- it will execute commands/ instructions while creating the docker container
+
+#CMD  ["npm", "server.js"],   ["npm", "start",],   ["python", "app.py"]
+
+#If you have multiple CMD instructions in ur Dockerfile 
+
+#CMD  ["npm", "server.js"]
+#CMD  ["npm", "start",],
+#CMD  ["python", "app.py"]
+
+
+#Nodejs app: - npm satrt, npm server.js,  npm app.js
+
+#EXPOSE:-  it will expose ur app or container port number 
+
+#EXPOSE 3000,  5000,  3130,  5150, 27017, 9000, 8080, 80
+
+#ENTRYPOINT:- it will execute commands or instructions while creating the container 
+
+#ENTRYPOINT ["apachectl", "-D", "FOREGROUND"]
+
+#Dockerfile,  dockerfile
+
+
+
+#Web servers
+# ===========
+
+#	1. Apache2 web server
+#	2. Httpd web server
+#	3. Nginx web server
+
+# Has one root directory:-  /var/www/html,  80
+
+# docker run -d --name html-login -p 80:80 <docker-image> 
+
+# Host port number:- it will be decided by DevOps team
+# Container/ app port number: it will be decided by dev team only
