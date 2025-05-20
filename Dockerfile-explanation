@@ -158,3 +158,14 @@
    95  docker tag python:latest muralisocial123/python:latest
    96  docker images
    97  docker push muralisocial123/python
+
+
+   Docker hub acc:- valid gmail id, username
+
+
+Store docker images into docker hub:
+===============================
+
+	1. Docker tag:- docker tag <image-name:tag>  <dockerhub-username/image-name:tag>
+	2. Docker login :-  docker login -u <username> :- userame:-    passwd: 
+Docker push :- docker push  <dockerhub-username/image-name:tag>
