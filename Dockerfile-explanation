@@ -1,4 +1,5 @@
-# Dockerfile:
+#   Dockerfile:
+
 # =========
 
 # It is a text document which contains instructions for building docker image
@@ -66,3 +67,66 @@
 
 # Host port number:- it will be decided by DevOps team
 # Container/ app port number: it will be decided by dev team only
+
+# commands
+
+   11  sudo apt-get update
+   12  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+   13  docker --version
+   14  ls
+   15  touch Dockerfile 
+   16  ls
+   17  touch ipl srh rcb csk mi dl kkr pbks rr lsg gt
+   18  ls
+   19  mkdir app
+   20  ls
+   21  mkdir isro
+   22  ls
+   23  cd app 
+   24  ls
+   25  touch demo web sample
+   26  ls
+   27  cd ..
+   28  ls
+   29  rm rr
+   30  rm srh
+   31  rm ipl
+   32  ls
+   33  rmdir isro
+   34  ls
+   35  rm csk gt dl lsg
+   36  rm mi rcb pbks
+   37  ls
+   38  rm kkr
+   39  ls
+   40  rmdir app
+   41  cd app
+   42  ls
+   43  rm -rf
+   44  ls
+   45  ls *
+   46  rm -rf *
+   47  ls
+   48  cd ..
+   49  ls
+   50  rmdir app
+   51  ls
+   52  vi Dockerfile 
+   53  ls
+   54  vi index.html
+   55  ls
+   56  cat index.html 
+   57  vi Dockerfile 
+   58  ls
+   59  cat Dockerfile 
+   60  ls
+   61  docker build -t login-page .
+   62  docker images
+   63  cat Dockerfile 
+   64  docker images
+   65  docker ps -a
+   66  docker run -d --name html-login -p 80:80 login-page
+   67  docker ps
+   68  ls
+   69  cat Dockerfile 
+   70  history
