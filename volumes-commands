@@ -1,0 +1,41 @@
+176  docker run -it --name c1 -v /data ubuntu /bin/bash
+  177  docker ps -a
+  178  docker rm c1
+  179  docker ps -a
+  180  docker volume  ls
+  181  cd /var/lib/docker/volumes
+  182  ls
+  183  cd 1fc5a698dde847c3c7fcfc6ff440f1ff4a5b1ebb54925fe20559bda0853ed2f5
+  184  ls
+  185  cd _data
+  186  ls
+  187  cd ..
+  188  cd cf555b6003ed754eba72af447deb6e9fa2962b99e048d72e1dac290f7be6d5b6
+  189  ls
+  190  cd _data
+  191  ls
+  192  cd _data
+  193  ls
+  194  cd ../..
+  195  ls
+  196  cd 2414a1d5b22390c6e3da59c58ea9d15a43515210952e415246216f7220fd2ec9
+  197  ls
+  198  cd _data
+  199  ls
+  200  cd ../..
+  201  exit
+  202  docker run -it --name d1 -v mydata:/madhupi ubuntu /bin/bash
+  203  docker ps -a
+  204  docker rm d1
+  205  docker ps -a
+  206  docker value ls
+  207  docker volume ls
+  208  cd /var/lib/docker/volumes
+  209  ls
+  210  cd mydata
+  211  ls
+  212  cd _data
+  213  ls
+  214  history
+
+  
