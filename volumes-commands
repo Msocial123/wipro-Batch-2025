@@ -37,5 +37,25 @@
   212  cd _data
   213  ls
   214  history
+216  cd /opt
+  217  ls
+  218  mkdir madhupi
+  219  ls
+  220  cd madhupi
+  221  pwd
+  222  exit
+  223  docker run -it --name d2 -v /opt/madhupi:/deck ubuntu /bin/bash
+  224  docker value ls
+  225  docker volume ls
+  226  cd /opt/madhupi
+  227  ls
+  228  mkdir cards
+  229  ls
+  230  exit
+  231  docker run -it --name d3 --privileged=true --volumes-from d2 ubuntu /bin/bash
+  232  cd /opt/madhupi
+  233  ls
+  234  cd cards
+  235  ls
 
   
