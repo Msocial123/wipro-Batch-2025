@@ -32,3 +32,42 @@
   35 cd ..
   36 ls
   37 cd .\IPL-SRH\
+   2 docker images
+   3 docker ps
+   4 docker pull ubuntu
+   5 docker images
+   6 docker create ubuntu
+   7 docker ps
+   8 docker ps -a
+   9 docker start hardcore_ramanujan
+  10 docker ps
+  11 docker ps -a
+  12 docker rm hardcore_ramanujan
+  13 docker create -d --name web -p 81:80 ubuntu
+  14 docker create --name web -p 81:80 ubuntu
+  15 docker ps
+  16 docker ps -a
+  17 docker start web
+  18 docker ps
+  19 docker ps -a
+  20 docker logs web
+  21 docker logs e-commerce
+  22 docker ps
+  23 docker stop c81d802d7f4c
+  24 docker ps
+  25 docker ps -a
+  26 docker restart e-commerce
+  27 docker ps
+  28 docker pause e-commerce
+  29 docker ps
+  30 docker unpause e-commerce
+  31 docker ps
+  32 docker exec -it e-commerce bash
+  33 ls
+  34 docker ps
+  35 docker inspect e-commerce
+  36 curl 172.17.0.3:3000
+  37 docker ps
+  38 docker ps -a
+  39 docker rm -f $(docker ps -aq)
+  40 docker ps -a
