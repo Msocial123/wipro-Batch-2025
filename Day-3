@@ -1,0 +1,34 @@
+   4 docker images
+   5 docker images
+   6 docker rmi mongo
+   7 docker images
+   8 docker rmi ipl-2025
+   9 docker images
+  10 docker rmi ipl-2025-v1
+  11 docker images
+  12 docker rmi todo-app
+  13 docker rmi $(docker images -q)
+  14 docker images
+  15 docker rmi -f $(docker images -q)
+  16 docker images
+  17 ls
+  18 docker ps
+  19 docker ps -a
+  20 docker build -t ipl-app .
+  21 docker images
+  22 docker rmi ipl-app
+  23 docker build -t ipl-app .
+  24 docker images
+  25 docker run -d --name ipl -p 80:80 ipl-app
+  26 docker ps
+  27 docker rm -f ipl
+  28 docker ps
+  29 docker ps -a
+  30 docker rm app
+  31 docker ps -a
+  32 docker rm vege
+  33 docker ps -a
+  34 ls
+  35 cd ..
+  36 ls
+  37 cd .\IPL-SRH\
