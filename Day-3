@@ -91,3 +91,7 @@ Docker ps
 Docker ps -a
 Docker logs
 Curl <ip-add:port>
+
+   4 docker compose up -d
+   5 docker compose ps
+
