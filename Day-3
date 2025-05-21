@@ -71,3 +71,23 @@
   38 docker ps -a
   39 docker rm -f $(docker ps -aq)
   40 docker ps -a
+docker create
+Docker run
+Docker rm
+Docker rm  -f
+Docker rm $(docker ps -aq)
+Docker rm -f $(docker ps -aq)
+Docker rmi
+Docker rmi $(docker images -q)
+Docker rmi  -f $(docker images -q)
+Docker stop
+Docker restart
+Docker start
+Docker pause
+Docker unpause
+Docker exec -it
+Docker inspect
+Docker ps 
+Docker ps -a
+Docker logs
+Curl <ip-add:port>
