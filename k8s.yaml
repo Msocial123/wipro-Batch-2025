@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: web-app
+  namespace: murali-ns
+spec:
+  containers:
+    - name: c-1
+      image: muralisocial123/netflix-25.v1:latest
+      ports:
+        - containerPort: 80
+
+=====================
+
+ kubectl get nodes
+    3  ls
+    4  kubectl get pods
+    5  kubectl get ns
+    6  kubectl get all -n kube-system
+    7  kubectl create ns murali-ns
+    8  kubectl get ns
+    9  kubectl get all -n murali-ns
+   10  vi namespace.yaml
+   11  ls
+   12  cat namespace.yaml
+   13  vi namespace.yaml
+   14  ls
+   15  kubectl apply -f namespace.yaml
+   16  kubectl get ns
+   17  vi pod.yaml
+   18  cat pod.yaml
+   19  ls
+   20  kubectl apply -f pod.yaml
+   21  kubectl get pods
+   22  kubectl get pods -n murali-ns
