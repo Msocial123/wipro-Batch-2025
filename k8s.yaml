@@ -40,4 +40,22 @@ spec:
     5  ls
     6  kubectl apply -f depoloyment.yaml
     7  kubectl get all
-
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ipl-deployment
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: ipl
+  template:
+    metadata:
+      labels:
+        app: ipl
+    spec:
+      containers:
+        - name: ipl-app
+          image: daviddocker526/ipl:latest
+          ports:
+            - containerPort: 80
