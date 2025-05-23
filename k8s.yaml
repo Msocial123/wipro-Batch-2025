@@ -33,3 +33,11 @@ spec:
    20  kubectl apply -f pod.yaml
    21  kubectl get pods
    22  kubectl get pods -n murali-ns
+       1  minikube start --driver=docker
+    2  minikube status
+    3  kubectl get nodes
+    4  vi depoloyment.yaml
+    5  ls
+    6  kubectl apply -f depoloyment.yaml
+    7  kubectl get all
+
