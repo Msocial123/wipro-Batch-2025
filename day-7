@@ -1,0 +1,139 @@
+	Ø Svc has 4 type
+
+	1. ClusterIP:- it is for internal purpose and It will expose ur app within the cluster
+	2. NodePort:- in a cluster we can have multiple worker nodes, testing not for prod
+	3. Load Balancer:- it will expose ur app outside of the cluster by providing an external ip address.
+	4. External name:- it will assign a host name or domain name for ur app
+
+Flipkart.com, amazon.com, google.com, oracle.com
+
+Any app using svc type lb, nodeport and external name
+
+	Ø Services for different deployments 
+	
+
+
+Node-1:- app is running on node-1 only
+Node-2
+Node-3
+Node-4
+
+
+Flipkart app has 9 svc's:- all these svc's
+
+
+	Ø 9 service yaml files
+
+LoadBalancer:- expose ur app 
+
+9 LoadBalancers:- its not free svc it’s a paid 
+
+Loadbalancer will charge around 5$: - 9 lb 9*5:- 45$  
+
+
+Ingress:- by using ingress it is easy to route the traffic to ur app and it’s a open source 
+
+45$:- 10$
+
+By using ingress u can easily attach ur host name or domain
+
+If u go with svc type lb and if u go with ingress for exposing ur app
+
+
+
+
+9 svc type lb or go with ingress 
+
+
+	1. One vm
+	2. IAM user and access keys in iam user
+	3. Install eksctl
+	4. Install kubectl 
+	5. Install aws cli
+	6. Configure aws access
+	7. Create eks cluster
+
+eksctl create cluster --name demo-cluster --region eu-west-3 --zones eu-west-3a,eu-west-3b --nodegroup-name demo-node-group  --node-type t2.medium --nodes 2
+
+
+Load Balancer:- it is not free svc it’s a paid svc 
+
+Flipkart app: has 9 svc's
+
+	Ø Each lb estimate cost is 5$ :- 9*5=45$
+
+
+Ingress :- one ingress for 9 svc's :- estimate cost is 20$
+
+
+
+	Ø For suppose I have a app I want to deploy this app in k8s cluster
+	Ø My app has 20 yaml file or manifest files
+	Ø If  I  want to deploy my app how can I deploy it? 5 mnts:- if go with helm 15 sec u can deploy 10 yaml , 20, 50., 100, 500,1000
+
+
+
+Ci/cd pipeline prerequisites:
+=======================
+
+	Ø You have jenkins server
+	Ø Install docker on jenkins server
+	Ø Install docker plugins & configure docker on jenkins web server beofre that u should provide docker credentials on jenkins web server
+
+	Ø You have running cluster
+	Ø Install kubectl on jenkins server
+	Ø Install aws cli on jenkins server
+	Ø Configure aws access keys on jenkins server
+	Ø You have to provide aws access keys and kubeconfig file into jenkins credentials 
+	Ø You have to install k8s & aws credentials plugins in jenkins web server
+	Ø You have copy kubeconfig file from k8s cluster to jenkins server
+
+
+
+Persistent volumes
+================
+
+	Ø Whenever pod deleted or crashed u will loose ur users data if u don’t want to loose ur data u should use persistent volumes in k8s
+	Ø Pv:- persistent volume
+
+	Ø Pv is a piece of storage in the k8s cluster
+	Ø U should ise storage classs
+	Ø It is a just resource in the k8s cluster like cpu or ram
+
+Pvc:- persistent volume claim
+	Ø It will request storage from the pv
+	Ø Pods use pvc's to access storage
+
+
+  105  vi ingress.yaml
+  106  ls
+  107  kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.10.1/deploy/static/provider/cloud/deploy.yaml
+  108  kubectl get ns
+  109  kubectl get all -n ingress-nginx
+  110  ls
+  111  kubectl get ingress
+  112  ls
+  113  cat ingress.yaml
+  114  kubectl get all
+  115  ls
+  116  cat ingress.yaml
+  117  vi ingress.yaml
+  118  cat ingress.yaml
+  119  ls
+  120  kubectl apply -f ingress.yaml
+  121  kubectl get ingress
+  122  ls
+  123  kubectl get all
+  124  kubectl exec -it mongodb-5cb5859fdd-znkxk -- mongosh
+  125  kubectl get all
+  126  kubectl exec -it mongodb-5cb5859fdd-vk5mq -- mongosh
+  127  ls
+  128  kubectl get sc
+  129  vi pv.yaml
+  130  ls
+  131  cat pv.yaml
+  132  vi pvc.yaml
+  133  ls
+  134  vi pod.yaml
+  135  ls
+  136  history
