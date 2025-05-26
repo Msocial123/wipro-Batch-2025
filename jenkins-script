@@ -26,7 +26,7 @@ pipeline {
 ====================================
 
 # if you get docker login failure error nad daemon permission denied error execute the follwoing commands
-sudo usermod -aG docker ubuntu
+sudo usermod -aG docker <vm-username>
 newgrp docker sudo chmod 777 /var/run/docker.sock
 sudo usermod -aG docker jenkins
 sudo systemctl restart jenkins
