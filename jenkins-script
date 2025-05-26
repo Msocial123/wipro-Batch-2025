@@ -19,8 +19,25 @@ pipeline {
                 }
             }
         }
+        stage ('deploy to container'){
+            steps {
+                sh 'docker run -d --name retail -p 3130:3130 muralisocial123/retail-app:v1'
+            }
+        }
+        
+        stage ('deploy to k8s'){
+            steps{
+                withKubeConfig(caCertificate: '', clusterName: '', contextName: '', credentialsId: 'k8s-config', namespace: '', restrictKubeConfigAccess: false, serverUrl: '') {
+                    sh 'kubectl apply -f mongodb-deployment.yml'
+                    sh 'kubectl apply -f mongodb-service.yml'
+                    sh 'kubectl apply -f userprofile-deployment.yml'
+                    sh 'kubectl apply -f usernode-js-service.yml'
+                  }
+            }
+        }
     }
 }
+
 
 
 ====================================
